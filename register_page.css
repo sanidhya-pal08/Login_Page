@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+  font-family: 'DM Sans', sans-serif;
+  color: #e8e4dc;
+}
+
+.main_box {
+  width: 100%;
+  max-width: 420px;
+  padding: 48px 40px;
+  background-color: #171717;
+  border: 0.5px solid #2a2a2a;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_box p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #8a8a8a;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.main_box p:first-of-type {
+  margin-top: 0;
+}
+
+.main_box input {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #1f1f1f;
+  border: 0.5px solid #2e2e2e;
+  border-radius: 8px;
+  color: #e8e4dc;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.main_box input:focus {
+  border-color: #555;
+}
+
+.main_box button:first-of-type {
+  width: 100%;
+  margin-top: 32px;
+  padding: 13px;
+  background-color: #e8e4dc;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.main_box button:first-of-type:hover {
+  background-color: #f0ece3;
+}
+
+.main_box button:first-of-type:active {
+  transform: scale(0.98);
+}
+
+.main_box a {
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.main_box a button {
+  width: 100%;
+  padding: 13px;
+  background-color: transparent;
+  color: #6b6b6b;
+  border: 0.5px solid #2a2a2a;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.main_box a button:hover {
+  color: #7c7c7c;
+  border-color: #555;
+}
