@@ -1,8 +1,30 @@
 document.querySelector(".registerBtn").addEventListener("click",handleSubmit);
 
 function handleSubmit(){
+    console.log("clicked");
     const email = document.getElementById("emailInfo").value;
     const password = document.getElementById("pass").value;
-    console.log(email, password);
-    alert("your account is successfully created go back to login page and log into your account");
+    fetch("http://127.0.0.1:8000/users/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            email: email,
+            password:password
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+    if(data.detail){
+        if(Array.isArray(data.detail)){
+            alert(data.detail[0].msg)  // pydantic validation error
+        } else {
+            alert(data.detail)  // your own HTTPException error
+        }
+    }
+    else{
+        window.location.href="logged_in.html"
+    }
+    })
 }
