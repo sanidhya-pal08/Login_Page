@@ -4,7 +4,7 @@ document.querySelector(".submitInfo").addEventListener("click", handleSubmit);
 function handleSubmit(){
     const email = document.getElementById("emailInfo").value;
     const password = document.getElementById("pass").value;
-    fetch("http://127.0.0.1:8000/login/", {
+    fetch("https://fast-api-login-app.onrender.com/login/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
